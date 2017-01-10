@@ -10,7 +10,7 @@ $('button').on('click',function(){
 
 $('#boxspace').on('click', '.box', function(){
   console.log('The mouse is in the box yo');
-  $(this).css('background-color', 'black');
+  $(this).css('background-color', randomColor());
   $(this).css('color', 'white');
 });
 
@@ -20,3 +20,12 @@ $('#boxspace').on('click', '.exit', function(){
 
 });
 });
+
+function randomColor () {
+  var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
