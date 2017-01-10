@@ -5,7 +5,7 @@ $('button').on('click',function(){
   // console.log('this= ', this )
   // console.log('$(this)= ', $(this));
 
-  $('#boxspace').append('<div class = "box">x</div>');
+  $('#boxspace').append('<div class = "box"><div class = "exit">x</div></div>');
 });
 
 $('#boxspace').on('click', '.box', function(){
@@ -14,4 +14,9 @@ $('#boxspace').on('click', '.box', function(){
   $(this).css('color', 'white');
 });
 
+$('#boxspace').on('click', '.exit', function(){
+  console.log('Clicked the X');
+  $(this).closest ('.box').remove ();
+
+});
 });
