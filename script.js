@@ -6,11 +6,12 @@ $('button').on('click',function(){
   // console.log('$(this)= ', $(this));
 
   $('#boxspace').append('<div class = "box"><div class = "exit">x</div></div>');
+  $('.box:last').css('background-color', randomColor());
 });
 
 $('#boxspace').on('click', '.box', function(){
-  console.log('The mouse is in the box yo');
-  $(this).css('background-color', randomColor());
+
+  $(this).css('background-color', 'black');
   $(this).css('color', 'white');
 });
 
